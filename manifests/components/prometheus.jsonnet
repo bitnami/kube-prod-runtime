@@ -42,8 +42,6 @@ local get_cm_web_hook_url = function(port, path) (
   "http://localhost:%s%s/-/reload" % [port, new_path]
 );
 
-// TODO: add blackbox-exporter
-
 {
   p:: "",
   metadata:: {
@@ -578,4 +576,6 @@ local get_cm_web_hook_url = function(port, path) (
       },
     },
   },
+
+  blackboxExporter: (import "blackbox-exporter.jsonnet"),
 }
